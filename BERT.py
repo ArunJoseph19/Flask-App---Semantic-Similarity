@@ -14,7 +14,7 @@ text_2 = df['text2'].to_list()
 
 from sentence_transformers import SentenceTransformer
 
-model = SentenceTransformer('sentence-transformers/nli-distilroberta-base-v2')
+model = SentenceTransformer('sentence-transformers/bert-base-nli-mean-tokens')
 
 embeds_1 = model.encode(text_1[:10])
 embeds_2 = model.encode(text_2[:10])
