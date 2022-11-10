@@ -12,9 +12,6 @@ df.head()
 text_1 = df['text1'].to_list()
 text_2 = df['text2'].to_list()
 
-from sentence_transformers import SentenceTransformer
-
-model = SentenceTransformer('sentence-transformers/bert-base-nli-mean-tokens')
 
 from sentence_transformers import SentenceTransformer
 model = SentenceTransformer('paraphrase-MiniLM-L6-v2')
