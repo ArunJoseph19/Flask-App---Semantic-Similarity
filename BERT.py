@@ -16,9 +16,12 @@ from sentence_transformers import SentenceTransformer
 
 model = SentenceTransformer('sentence-transformers/bert-base-nli-mean-tokens')
 
+from sentence_transformers import SentenceTransformer
+model = SentenceTransformer('paraphrase-MiniLM-L6-v2')
+
 embeds_1 = model.encode(text_1[:10])
 embeds_2 = model.encode(text_2[:10])
 
 from sklearn.metrics.pairwise import cosine_similarity
 
-print(cosine_similarity([embeds_1[9]],embeds_2))
+print(cosine_similarity([embeds_1[0]],embeds_2))
