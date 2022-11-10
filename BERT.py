@@ -13,12 +13,13 @@ text_1 = df['text1'].to_list()
 text_2 = df['text2'].to_list()
 
 
-from sentence_transformers import SentenceTransformer
-model = SentenceTransformer('paraphrase-MiniLM-L6-v2')
+#from sentence_transformers import SentenceTransformer
+#model = SentenceTransformer('paraphrase-MiniLM-L6-v2')
 
-embeds_1 = model.encode(text_1[:10])
-embeds_2 = model.encode(text_2[:10])
+#embeds_1 = model.encode(text_1[:10])
+#embeds_2 = model.encode(text_2[:10])
 
 from sklearn.metrics.pairwise import cosine_similarity
 
-print(cosine_similarity([embeds_1[0]],embeds_2))
+print("Hello World")
+#print(cosine_similarity([embeds_1[0]],embeds_2))
